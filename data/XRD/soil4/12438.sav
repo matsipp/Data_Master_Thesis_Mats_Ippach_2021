@@ -1,0 +1,41 @@
+% SampleID: Soil-4-Core-C-Horizon
+% Theoretical instrumental function
+VERZERR=D8_Oslo_Geo.geq
+% Wavelength
+LAMBDA=CU
+% Phases
+STRUC[1]=Quartz-p3221.str
+STRUC[2]=Chlorite2b.str
+STRUC[3]=HORNBL1.STR
+STRUC[4]=MicroMax.str
+STRUC[5]=Plag16an.str
+% Measured data
+VAL[1]=12438.xy
+% Minimum Angle (2theta)
+% WMIN=10
+% Maximum Angle (2theta)
+% WMAX=60
+% Result list output
+LIST=12438.lst
+% Peak list output
+OUTPUT=12438.par
+% Diagram output
+DIAGRAMM=12438.dia
+% Global parameters for zero point and sample displacement
+EPS1=0
+PARAM[1]=EPS2=0_-0.01^0.01
+NTHREADS=4
+PROTOKOLL=Y
+
+sum=SiO2p3221+chlorite2b+hornbl1+micromax+plag16an
+QSiO2p3221=SiO2p3221/sum
+Qchlorite2b=chlorite2b/sum
+Qhornbl1=hornbl1/sum
+Qmicromax=micromax/sum
+Qplag16an=plag16an/sum
+
+GOAL[1]=QSiO2p3221
+GOAL[2]=Qchlorite2b
+GOAL[3]=Qhornbl1
+GOAL[4]=Qmicromax
+GOAL[5]=Qplag16an
