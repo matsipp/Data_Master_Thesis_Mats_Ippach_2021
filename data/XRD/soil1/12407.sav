@@ -1,0 +1,25 @@
+% SampleID: Soil-1-NMBU
+% Theoretical instrumental function
+VERZERR=D8_Oslo_Geo.geq
+% Wavelength
+LAMBDA=CU
+% Phases
+% Measured data
+VAL[1]=12407.xy
+% Minimum Angle (2theta)
+% WMIN=10
+% Maximum Angle (2theta)
+% WMAX=60
+% Result list output
+LIST=12407.lst
+% Peak list output
+OUTPUT=12407.par
+% Diagram output
+DIAGRAMM=12407.dia
+% Global parameters for zero point and sample displacement
+EPS1=0
+PARAM[1]=EPS2=0_-0.01^0.01
+NTHREADS=4
+PROTOKOLL=Y
+
+sum=
