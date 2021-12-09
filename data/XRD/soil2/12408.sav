@@ -1,0 +1,40 @@
+% SampleID: Soil-2-Core-Leached
+% Theoretical instrumental function
+VERZERR=D8_Oslo_Geo.geq
+% Wavelength
+LAMBDA=CU
+% Phases
+STRUC[1]=Quartz-p3221.str
+STRUC[2]=MicroMax.str
+STRUC[3]=HORNBL1.STR
+STRUC[4]=Plag16an.str
+% Measured data
+VAL[1]=12408.xy
+% Minimum Angle (2theta)
+% WMIN=10
+% Maximum Angle (2theta)
+% WMAX=60
+% Result list output
+LIST=12408.lst
+% Peak list output
+OUTPUT=12408.par
+% Diagram output
+DIAGRAMM=12408.dia
+% Global parameters for zero point and sample displacement
+EPS1=0
+PARAM[1]=EPS2=0_-0.01^0.01
+NTHREADS=4
+PROTOKOLL=Y
+
+sum=
+
+sum=SiO2p3221+micromax+hornbl1+plag16an
+QSiO2p3221=SiO2p3221/sum
+Qmicromax=micromax/sum
+Qhornbl1=hornbl1/sum
+Qplag16an=plag16an/sum
+
+GOAL[1]=QSiO2p3221
+GOAL[2]=Qmicromax
+GOAL[3]=Qhornbl1
+GOAL[4]=Qplag16an
