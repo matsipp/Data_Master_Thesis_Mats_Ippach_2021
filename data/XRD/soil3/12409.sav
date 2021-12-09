@@ -1,0 +1,38 @@
+% SampleID: Soil-3-Core-Bottom
+% Theoretical instrumental function
+VERZERR=D8_Oslo_Geo.geq
+% Wavelength
+LAMBDA=CU
+% Phases
+STRUC[1]=Quartz-p3221.str
+STRUC[2]=Plag16an.str
+STRUC[3]=MicroMax.str
+STRUC[4]=HORNBL1.STR
+% Measured data
+VAL[1]=12409.xy
+% Minimum Angle (2theta)
+% WMIN=10
+% Maximum Angle (2theta)
+% WMAX=60
+% Result list output
+LIST=12409.lst
+% Peak list output
+OUTPUT=12409.par
+% Diagram output
+DIAGRAMM=12409.dia
+% Global parameters for zero point and sample displacement
+EPS1=0
+PARAM[1]=EPS2=0_-0.01^0.01
+NTHREADS=4
+PROTOKOLL=Y
+
+sum=SiO2p3221+plag16an+micromax+hornbl1
+QSiO2p3221=SiO2p3221/sum
+Qplag16an=plag16an/sum
+Qmicromax=micromax/sum
+Qhornbl1=hornbl1/sum
+
+GOAL[1]=QSiO2p3221
+GOAL[2]=Qplag16an
+GOAL[3]=Qmicromax
+GOAL[4]=Qhornbl1
